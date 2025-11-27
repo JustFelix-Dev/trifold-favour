@@ -1,9 +1,9 @@
 import FormButton from "@/components/formbutton";
 import FormInput from "@/components/forminput";
 import icons from "@/constants/icons";
+import { router } from "expo-router";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { router } from "expo-router";
 
 export default function Index() {
   const handleSignIn = () => {
@@ -68,7 +68,10 @@ export default function Index() {
       <View className="mt-20">
         <Text className="text-[14px] font-poppins text-center">
           Don't have an account?{" "}
-          <Text className="font-poppins-medium underline" onPress={handleSignUpPress}>
+          <Text
+            className="font-poppins-medium underline"
+            onPress={handleSignUpPress}
+          >
             Sign Up
           </Text>
         </Text>
