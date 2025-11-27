@@ -8,7 +8,7 @@ export default function Index() {
       <TouchableOpacity>
         <Image source={icons.arrowleft} className="h-[15px] w-[18px]" />
       </TouchableOpacity>
-      <Text className="">Create Account</Text>
+      <Text className="text-[24px] font-semibold">Create Account</Text>
       <Text>Setup your account to get started</Text>
     </SafeAreaView>
   );
