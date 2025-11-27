@@ -1,21 +1,39 @@
+import icons from "@/constants/icons";
 import React from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 interface FormInterface {
   title: string;
   placeholder: string;
+  eye?: boolean;
 }
-const FormInput = ({ title, placeholder }: FormInterface) => {
+const FormInput = ({ title, placeholder, eye }: FormInterface) => {
   return (
     <View className="mb-5">
       <Text className="text-[14px] font-poppins-medium text-black">
         {title}
       </Text>
-      <View className="h-[45px] border-[1px] px-3 mt-2 border-gray-2 rounded-[8px]">
+      <View className="h-[45px] border-[1px] px-3 mt-2 border-gray-2 rounded-[8px] flex-row items-center justify-between">
         <TextInput
           placeholder={placeholder}
           className="text-[14px] font-poppins text-[#bdbdbd]"
+          secureTextEntry={eye}
         />
+        {eye && (
+          <TouchableOpacity>
+            <Image
+              source={icons.eyeclose}
+              className="h-[15.01px] w-[18.75px]"
+            />
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
