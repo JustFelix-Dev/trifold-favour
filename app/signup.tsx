@@ -13,8 +13,8 @@ export default function Signup() {
   const handleSignUp = () => {
     // Add your signup logic here
     console.log("Sign up pressed");
-    // After successful signup, you might want to navigate somewhere
-    // router.push("/dashboard"); // Example
+    // After successful signup, navigate to assessment details
+    router.push("/assessment-details");
   };
 
   return (
