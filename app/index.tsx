@@ -3,8 +3,23 @@ import FormInput from "@/components/forminput";
 import icons from "@/constants/icons";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { router } from "expo-router";
 
 export default function Index() {
+  const handleSignIn = () => {
+    // Add your login logic here
+    console.log("Sign in pressed");
+  };
+
+  const handleSignUpPress = () => {
+    router.push("/signup");
+  };
+
+  const handleForgotPassword = () => {
+    // Add forgot password logic here
+    console.log("Forgot password pressed");
+  };
+
   return (
     <SafeAreaView className="flex-1 bg-white pt-10 px-5">
       <TouchableOpacity>
@@ -25,14 +40,14 @@ export default function Index() {
         <Text className="text-[14px] font-poppins text-black flex-1">
           Remember Me
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleForgotPassword}>
           <Text className="text-[14px] font-poppins-medium text-primary-900 underline">
             Forgot password?
           </Text>
         </TouchableOpacity>
       </View>
       {/* button */}
-      <FormButton title="Sign In" />
+      <FormButton title="Sign In" onPress={handleSignIn} />
       {/* or sign up with */}
       <View className="flex-row items-center justify-between mt-2 mb-5">
         <View className="w-[35%] h-[1px] bg-[#BDBDBD]" />
@@ -53,7 +68,9 @@ export default function Index() {
       <View className="mt-20">
         <Text className="text-[14px] font-poppins text-center">
           Don't have an account?{" "}
-          <Text className="font-poppins-medium underline">Sign Up</Text>
+          <Text className="font-poppins-medium underline" onPress={handleSignUpPress}>
+            Sign Up
+          </Text>
         </Text>
       </View>
     </SafeAreaView>

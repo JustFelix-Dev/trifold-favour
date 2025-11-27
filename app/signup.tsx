@@ -3,11 +3,23 @@ import FormInput from "@/components/forminput";
 import icons from "@/constants/icons";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { router } from "expo-router";
 
 export default function Signup() {
+  const handleGoBack = () => {
+    router.back();
+  };
+
+  const handleSignUp = () => {
+    // Add your signup logic here
+    console.log("Sign up pressed");
+    // After successful signup, you might want to navigate somewhere
+    // router.push("/dashboard"); // Example
+  };
+
   return (
     <SafeAreaView className="flex-1 bg-white pt-10 px-5">
-      <TouchableOpacity>
+      <TouchableOpacity onPress={handleGoBack}>
         <Image source={icons.arrowleft} className="h-[15px] w-[18px] mb-5" />
       </TouchableOpacity>
       <Text className="text-[24px] font-poppins-semibold">Create Account</Text>
@@ -38,7 +50,7 @@ export default function Signup() {
         </View>
       </View>
       {/* button */}
-      <FormButton title="Sign Up" />
+      <FormButton title="Sign Up" onPress={handleSignUp} />
       {/* or sign up with */}
       <View className="flex-row items-center justify-between mt-2 mb-5">
         <View className="w-[35%] h-[1px] bg-[#BDBDBD]" />
