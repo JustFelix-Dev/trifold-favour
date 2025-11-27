@@ -17,6 +17,7 @@ export default function Index() {
       <View className="mt-6">
         <FormInput title="Your Full name" placeholder="Enter your full name" />
         <FormInput title="Your Email address" placeholder="Email address" />
+        <FormInput title="Create Password" placeholder="Password" />
       </View>
     </SafeAreaView>
   );
