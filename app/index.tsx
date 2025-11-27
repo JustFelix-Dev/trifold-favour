@@ -6,9 +6,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
-    <SafeAreaView className="flex-1 bg-white pt-8 px-5">
+    <SafeAreaView className="flex-1 bg-white pt-10 px-5">
       <TouchableOpacity>
-        <Image source={icons.arrowleft} className="h-[15px] w-[18px] mb-4" />
+        <Image source={icons.arrowleft} className="h-[15px] w-[18px] mb-5" />
       </TouchableOpacity>
       <Text className="text-[24px] font-poppins-semibold">Sign In</Text>
       <Text className="text-[16px] font-poppins text-gray-1">
@@ -26,7 +26,7 @@ export default function Index() {
           Remember Me
         </Text>
         <TouchableOpacity>
-          <Text className="text-[14px] font-poppins-semibold text-primary-900 underline">
+          <Text className="text-[14px] font-poppins-medium text-primary-900 underline">
             Forgot password?
           </Text>
         </TouchableOpacity>
@@ -50,9 +50,10 @@ export default function Index() {
           <Image source={icons.facebook} className="h-[24px] w-[24px]" />
         </View>
       </View>
-      <View>
+      <View className="mt-20">
         <Text className="text-[14px] font-poppins text-center">
-          Don't have an account? Sign Up
+          Don't have an account?{" "}
+          <Text className="font-poppins-medium underline">Sign Up</Text>
         </Text>
       </View>
     </SafeAreaView>
