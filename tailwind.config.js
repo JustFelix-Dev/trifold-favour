@@ -11,6 +11,17 @@ module.exports = {
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
+      fontFamily: {
+        "poppins-thin": ["Poppins-Thin"],
+        "poppins-light": ["Poppins-Light"],
+        poppins: ["Poppins-Regular"],
+        "poppins-medium": ["Poppins-Medium"],
+        "poppins-semibold": ["Poppins-SemiBold"],
+        "poppins-bold": ["Poppins-Bold"],
+        "poppins-extrabold": ["Poppins-ExtraBold"],
+        "poppins-black": ["Poppins-Black"],
+        "poppins-italic": ["Poppins-Italic"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
