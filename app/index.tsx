@@ -1,12 +1,15 @@
-import { Text, View } from "react-native";
+import icons from "@/constants/icons";
+import { Image, Text, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
-    <View className="flex-1 items-center justify-center">
-      <Text className="bg-gray-500 text-white p-2 rounded-lg text-xl">
-      Welcome to Trifold Scaffold,
-        </Text>
-        <Text className="text-gray-500 text-xl">Favour Jewoola!</Text>
-    </View>
+    <SafeAreaView className="flex-1 bg-white">
+      <TouchableOpacity>
+        <Image source={icons.arrowleft} className="h-[15px] w-[18px]" />
+      </TouchableOpacity>
+      <Text className="">Create Account</Text>
+      <Text>Setup your account to get started</Text>
+    </SafeAreaView>
   );
 }
