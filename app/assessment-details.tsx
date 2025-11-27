@@ -38,6 +38,13 @@ export default function AssessmentDetails() {
           className="h-[220px] w-[220px] self-center"
         />
       </View>
+      {/* section b */}
+      <View>
+        <Text>
+          Healthy emotions make for healthy relationships. See how deeply you
+          connect, care for, and stay emotionally present for your partner.
+        </Text>
+      </View>
     </SafeAreaView>
   );
 }
