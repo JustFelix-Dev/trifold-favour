@@ -1,5 +1,6 @@
 import icons from "@/constants/icons";
 import images from "@/constants/images";
+import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import {
@@ -70,7 +71,7 @@ const Resources = () => {
         <StatusBar style="dark" backgroundColor="#ffffff" />
         {/* header */}
         <View className="bg-white flex-row items-center justify-between px-6 pt-5 pb-2">
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => router.back()}>
             <Image source={icons.arrowleft} className="h-[15px] w-[18px]" />
           </TouchableOpacity>
           <Text className="text-[20px] text-black font-poppins-semibold ">
