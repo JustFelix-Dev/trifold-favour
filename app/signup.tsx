@@ -14,7 +14,8 @@ export default function Signup() {
     // Add your signup logic here
     console.log("Sign up pressed");
     // After successful signup, navigate to assessment details
-    router.push("/assessment-details");
+    // router.push("/assessment-details");
+    router.push("/resources");
   };
 
   return (
