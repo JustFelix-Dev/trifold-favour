@@ -22,13 +22,13 @@ const Resources = () => {
     },
     {
       id: 2,
-      title: "Strengthening Emotional Intimacy",
+      title: "Enhancing Physical Connection",
       desc: 'Jesudamilare "JD" Adesegun-David',
       image: images.image2,
     },
     {
       id: 3,
-      title: "Strengthening Emotional Intimacy",
+      title: "Promoting Shared Goals",
       desc: 'Jesudamilare "JD" Adesegun-David',
       image: images.image3,
     },
@@ -74,15 +74,82 @@ const Resources = () => {
           })}
         </View>
         {/* articles */}
-        <View>
+        <View className="mt-6 mb-2 bg-white rounded-[12px] px-3 py-2">
+          <View className="flex-row items-center justify-between mb-4">
+            <Text className="text-[16px] font-poppins-semibold text-black">
+              Articles
+            </Text>
+            <TouchableOpacity>
+              <Text className="text-[12px] font-poppins text-primary-600">
+                More
+              </Text>
+            </TouchableOpacity>
+          </View>
           <View>
             {articlesData.map((item, index) => {
               return (
-                <View key={index}>
-                  <Image source={item.image} />
-                </View>
+                <TouchableOpacity
+                  key={index}
+                  className="flex-row items-center mb-2"
+                >
+                  <Image
+                    source={item.image}
+                    className="w-[90px] h-[69px] rounded-[6px]"
+                    resizeMode="cover"
+                  />
+                  <View className="flex-1 ml-3">
+                    <Text className="text-[13px] font-poppins-semibold text-black mb-1">
+                      {item.title}
+                    </Text>
+                    <Text className="text-[11.5px] font-poppins text-gray-1">
+                      {item.desc}
+                    </Text>
+                  </View>
+                  <TouchableOpacity>
+                    <Image
+                      source={icons.bookmark}
+                      className="w-[12px] h-[14px]"
+                    />
+                  </TouchableOpacity>
+                </TouchableOpacity>
               );
             })}
+          </View>
+        </View>
+
+        {/* books */}
+        <View className="mt-6">
+          <View className="flex-row items-center justify-between mb-4">
+            <Text className="text-[16px] font-poppins-semibold text-black">
+              Books
+            </Text>
+            <TouchableOpacity>
+              <Text className="text-[12px] font-poppins text-primary-600">
+                More
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View className="flex-row items-center justify-between">
+            <TouchableOpacity className="bg-white rounded-[12px] p-3 w-[48%]">
+              <Image
+                source={images.image1}
+                className="w-full h-[120px] rounded-[8px] mb-3"
+                resizeMode="cover"
+              />
+              <Text className="text-[12px] font-poppins-medium text-black mb-1">
+                Vision-Driven Marriage
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity className="bg-white rounded-[12px] p-3 w-[48%]">
+              <Image
+                source={images.image2}
+                className="w-full h-[120px] rounded-[8px] mb-3"
+                resizeMode="cover"
+              />
+              <Text className="text-[12px] font-poppins-medium text-black mb-1">
+                Believers' Authority
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
